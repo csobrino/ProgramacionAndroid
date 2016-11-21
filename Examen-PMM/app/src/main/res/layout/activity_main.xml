@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.mati.examen_pmm.MainActivity">
+
+    <TextView
+        android:text="Alquiler de Coches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_ActivityMain_Titulo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="90dp"
+        android:src="@drawable/coche"
+        android:id="@+id/imgViewLogo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="120dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgViewLogo"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/radioGroup_Tarifas"
+        android:checkedButton="@+id/radioButton_TarifaNormal"
+        android:layout_marginTop="25dp">
+
+        <RadioButton
+            android:text="Sin Seguro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_TarifaNormal"
+            android:layout_weight="1"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="Con Seguro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioButton_TarifaUrgente"
+            android:layout_weight="1" />
+    </RadioGroup>
+
+    <CheckBox
+        android:text="Radio/ DVD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/checkBox_TarjetaDedicada" />
+
+    <CheckBox
+        android:text="Aire Acondicionado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkBox_TarjetaDedicada"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBox_CajaRegalo" />
+    <CheckBox
+        android:text="GPS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/checkBox_CajaRegalo"
+        android:layout_marginLeft="145dp"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBox_GPS" />
+
+
+
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:hint="Numero de Horas"
+        android:id="@+id/editTextPesoPaquete"
+        android:inputType="numberDecimal"
+        android:selectAllOnFocus="false" />
+    <Button
+        android:text="Total Precio"
+        android:id="@+id/buttonTotalPrecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="390dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="125dp"
+        android:id="@+id/textViewPreciototal"
+        android:text="Precio vacio"/>
+
+    <Button
+        android:text="FACTURA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/buttonHacerCalculos" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerDestinos"
+        android:layout_above="@+id/radioGroup_Tarifas"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
